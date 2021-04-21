@@ -1,0 +1,12 @@
+version: '3.9'
+services:
+  api:
+    # image: imake/nest-dockerized
+    build:
+      dockerfile: Dockerfile
+      context: .
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+    ports:
+      - '8090:3000'
